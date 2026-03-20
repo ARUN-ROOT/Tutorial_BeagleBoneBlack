@@ -1,0 +1,52 @@
+
+sudo apt-get install openssh-client
+
+
+BeagleBone user: debian
+BeagleBone hostname: beaglebone.local
+Or IP example: 192.168.6.2
+
+Pre-requisite : 
+==================
+check USB Connection Host and BBB
+Try ping 192.168.6.2
+or 
+Try ping beaglebone.local
+
+copy file from HOST --> BBB
+=================================
+Using IP address : 
+=====================
+scp <filename> debian@192.168.6.2:/home/debian/
+
+Using Hostname :
+=====================
+scp output_h debian@beaglebone.local:/home/debian/       
+
+Open Another Terminal login into BBB Terminal 
+ssh debian@192.168.6.2  //it connect BBB
+paswd : temppwd
+
+ls
+
+
+Copy file from BBB --> HOST
+===============================
+scp debian@192.168.6.2:/home/debian/<filename> .
+
+//////////////////////////////////////////////////////////////////////////////////
+
+Copy Folder from HOST --> BBB
+===================================
+
+scp -r my_project/ debian@beaglebone.local:/home/debian/
+scp -r my_project/ debian@192.168.6.2:/home/debian/
+
+Copy Folder from BBB --> HOST
+=================================
+
+scp -r debian@beaglebone.local:/home/debian/my_project .
+scp -r debian@192.168.6.2:/home/debian/<foldername> .
+
+
+ssh debian@192.168.6.2

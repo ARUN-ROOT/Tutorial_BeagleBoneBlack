@@ -1,0 +1,33 @@
+{
+ "name": "beaglebone-getting-started"
+ , "version": "0.0.3"
+ , "main": "main.js"
+ , "description": "BeagleBone Getting Started App"
+ , "keywords": [ "beaglebone", "linux", "electron" ]
+ , "scripts": {
+    "start": "electron ."
+ }
+ , "webkit": {
+  "plugin": true
+ }
+ , "maintainers": [
+  {
+   "name": "Jason Kridner"
+   , "email": "jkridner@beagleboard.org"
+   , "web": "http://jkridner.wordpress.com"
+  }
+ ]
+ , "repositories": [
+  {
+   "type": "git"
+   , "url": "http://github.com/jadonk/beaglebone-getting-started.git"
+   , "path": ""
+  }
+ ]
+ , "dependencies": {
+  "socket.io": "0.9.11"
+  , "jsdom": "0.2.10"
+  , "mdns": "0.0.7"
+  , "electron": ">=1.8.2-beta5"
+ }
+}

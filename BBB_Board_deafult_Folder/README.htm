@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+  <title>Getting started with Beagle</title>
+  <meta name="keywords" content="Beagle Board, BeagleBoard, beagleboard.org, BeagleBone, BeagleBoard-xM, bealgeboard, open hardware, open source, Linux, computer" />
+  <meta name=viewport content='width=950' />
+  <link href="https://feeds.feedburner.com/BeagleBoard" rel="alternate" title="Beagle Board news feed" type="application/atom+xml" />
+  <link rel="icon" href="static/beagle.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="static/beagle.ico" type="image/x-icon" />
+  <style type="text/css" media="screen">@import "static/common.css";</style>
+  <style type="text/css" media="screen">@import "static/login.css";</style>
+  <style type="text/css" media="screen">@import "static/beagle.css";</style>
+  <script type="text/javascript" src="static/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="static/jquery.ui.core.js"></script>
+  <script type="text/javascript" src="static/jquery.ui.widget.js"></script>
+  <script type="text/javascript" src="static/beagleboard.js"></script>
+ </head>
+ <body>
+ <div class="top">
+  <div class="top-header"><a href="https://beagleboard.org/"><img src="static/images/beagle_logo_326x60.png" alt="Beagle Board - beagleboard.org" style="background:white;border:0;width:326;height:60;" /></a>
+  
+  <div class="social">
+    <span style="padding-left:8px"><a href="https://facebook.com/beagleboard"><img src="static/images/icon_facebook.png" style="width:27;height:28;border:0" alt="facebook" /></a></span>
+    <span style="padding-left:8px"><a href="https://twitter.com/beagleboardorg"><img src="static/images/icon_twitter.png" style="width:27;height:28;border:0" alt="twitter" /></a></span>
+    <span style="padding-left:8px"><a href="https://www.linkedin.com/groups/BeagleBoardorg-1474607?gid=1474607"><img src="static/images/icon_linkedin.png" style="width:27;height:28;border:0" alt="linkedin" /></a></span>
+    <span style="padding-left:8px"><a href="https://www.youtube.com/user/jadonk"><img src="static/images/youTube-icon.png" style="width:27;height:28;border:0" alt="YouTube" /></a></span>
+  </div> 
+</div>
+   </div>
+  <a id="top"></a>
+  <!-- DIV that centers page - START -->
+  <div id="wrapper">
+  <!--start menu bar-->
+<div id='cssmenu'>
+<ul>
+   <li class='has-sub'><a href='https://beagleboard.org/getting-started'><span>Start &#8659;</span></a>
+   <ul>
+         <li class='has-sub'><a href='https://beagleboard.org/about'><span>About Us</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/getting-started'><span>Getting Started</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/latest-images'><span>Latest Software Images</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/newsletter'><span>Subscribe to Newsletter</span></a></li>
+      </ul>
+   </li>
+
+   <li class='has-sub'><a href='https://beagleboard.org/boards'><span>Discover Boards &#8659;</span></a>
+   <ul>
+         <li class='has-sub'><a href='https://beagleboard.org/pocket'><span>&#9654; PocketBeagle &#9664;</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/blue'><span>&#9654; BeagleBone Blue  &#9664;</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/black'><span>&#9654; BeagleBone Black &#9664;</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/ai'><span>&#9654; BeagleBone AI &#9664;</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/black-wireless'><span>&#9654; BeagleBone Black Wireless &#9664;</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/green'><span>SeeedStudio BeagleBone Green</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/green-wireless'><span>SeeedStudio BeagleBone Green Wireless</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/enhanced'><span>SanCloud BeagleBone Enhanced</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/cape'><span>BeagleBone Capes</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/bone-original'><span>BeagleBone</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/x15'><span>&#9654; BeagleBoard-X15 &#9664;</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/beagleboard-xm'><span>BeagleBoard-xM</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/beagleboard'><span>BeagleBoard</span></a></li>
+      </ul>   
+    </li>
+  
+   <li class='has-sub'><a href='https://beagleboard.org/support'><span>Learn &#8659;</span></a>   
+   <ul>
+         <li class='has-sub'><a href='https://beagleboard.org/Support/bone101'><span>Introduction</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/books' target="_blank"><span>Books &#10138;</span></a></li>
+         <li class='has-sub'><a href='http://elinux.org/BeagleBoard' target="_blank"><span>Wiki &#10138;</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/Support/Hardware+Support'><span>Hardware Support</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/Support/Software+Support'><span>Software Support</span></a></li>
+         <li class='has-sub'><a href='https://learn.adafruit.com/category/beaglebone' target="_blank"><span>Adafruit Tutorials &#10138;</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/Support/BoneScript'><span>BoneScript Library</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/Support/FAQ'><span>FAQ</span></a></li>
+      </ul> 
+   </li>
+   
+   <li class='has-sub'><a href='https://beagleboard.org/project'><span>Explore &#8659;</span></a>
+   <ul>
+         <li class='has-sub'><a href='https://beagleboard.org/blog'><span>Blog</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/p'><span>Projects</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/gsoc'><span>Google Summer of Code</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/Videos'><span>Videos</span></a></li>
+   </ul>
+   </li>
+
+   <li class='has-sub'><a href='https://beagleboard.org/Community'><span>Collaborate &#8659;</span></a>
+   <ul>
+         <li class='has-sub'><a href='https://beagleboard.org/chat'><span>Live Chat</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/discuss'><span>Forums</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/p/projects/new'><span>Register Project</span></a></li>
+         <li class='has-sub'><a href='https://beagleboard.org/newsletter'><span>Subscribe to Newsletter</span></a></li>
+         <li class='has-sub'><a href='https://github.com/beagleboard' target="_blank"><span>Github &#10138;</span></a></li>
+         <!-- <li class='has-sub'><a href='https://upverter.com/Beagle' target="_blank"><span>Upverter &#10138;</span></a></li>-->
+      </ul>
+   </li>
+</ul>
+<!--
+<div id="search">
+<ul><li class="google">
+<div style="width:180px";>
+<script>
+  (function() {
+    var cx = '001071468846613058269:xd-gxvzmbq4';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchresults-only></gcse:searchresults-only>
+</div>
+      </li></ul></div>
+-->
+</div>
+<!--end menu bar-->
+
+   <!-- Content Area - START -->
+    <div id="content">
+     <div id="contentbuffer">
+     <p class="breadcrumb"><a href="https://beagleboard.org/">BeagleBoard.org</a> &rsaquo; <a href="https://beagleboard.org/getting-started/">getting-started</a></p>
+     <div id="page">
+<font size="+1">
+<a href="https://github.com/beagleboard/beaglebone-getting-started"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+  <script type="text/javascript" src="static/beagle-ui.js"></script>
+  <script type="text/javascript" src="static/bonescript.js"></script>
+  <script>
+var step1done = false;
+var testedOnce = false;
+$(document).ready(function(){  
+ testForCompletedSteps();
+});
+ 
+function testForCompletedSteps() {
+ if(!testedOnce) {
+  testedOnce = true;
+  if(typeof ga == "function") {
+   ga('send', 'event', 'bonescript', 'started', 'getting-started');
+  }
+ }
+ if(!step1done && window.location.toString().match(/^file.*BEAGLEBONE\/START.htm$/)) {
+  step1done = true;
+  $('#fmStep1').addClass('fmGreen');
+  if(typeof ga == "function") {
+   ga('send', 'event', 'bonescript', 'plugged-in', 'getting-started');
+  }
+ }
+}
+
+function foundBone(host) {
+ console.log("Found BeagleBone at " + host);
+ $('a.bonelink').each(function(i){ $(this).attr('href',"http://"+host); });
+ $('a#bonelinktext').html("http://" + host);
+ $('ul#quickLinks').html(
+  '<li class="fmGreen"><a href="http://' + host + '/" class="external">Cloud9 IDE</a></li>' +
+  '<li class="fmGreen"><a href="ssh://debian@' + host + '/" class="external">SSH server</a></li>' +
+  '<li class="fmGreen"><a href="http://' + host + ':1880/" class="external">Node-RED</a></li>'
+ );
+ $('ul#quickLinks').show();
+ step1done = true;
+ $('#fmStep1').addClass('fmGreen');
+ $('#fmStep2').addClass('fmGreen');
+ if(typeof ga == "function") {
+  ga('send', 'event', 'bonescript', 'connected7', 'getting-started');
+ }
+};
+
+function messageFromIframe(event) {
+  console.log(JSON.stringify(event.data));
+  foundBone(event.data.host);
+};
+window.addEventListener('message', messageFromIframe, true);
+//var bblocal_frame = document.getElementById('bblocal');
+//bblocal_frame.addEventListener('message', messageFromIframe);
+
+  </script>
+ </head>
+ <body>
+    <div id="floatMenu">  
+     <ul id="quickLinks" style="display:none;">
+     </ul>
+     <ul>  
+       <li><a href="#update"><strong>Step 0:</strong><br />
+Update image</a></li>
+       <li id="fmStep1"><a href="#step1"><strong>Step 1:</strong><br />
+Power and boot</a></li>
+       <li id="fmStep2"><a href="#step2"><strong>Step 2:</strong><br />
+Enable a network connection</a></li>        
+       <li id="fmStep3"><a href="#step3"><strong>Step 3:</strong><br />
+Browse to web server on Beagle</a></li>
+    </ul>
+    <ul>
+     <li><a href="#troubleshooting">Troubleshooting</a></li>
+     <li><a href="#distros">Other software options</a></li>
+     <li><a href="#hardware">Hardware documentation</a></li>
+     <li><a href="#books">Books</a></li>
+    </ul>
+   </div>
+   <div id="gettingstarted">
+ 
+</a></p>
+    <h1>Getting Started</h1>
+    <p>Beagles are tiny computers ideal for learning and prototyping with electronics.
+    Read the step-by-step getting started tutorial below to begin developing with your Beagle in minutes.</p>
+    
+<!--
+    <p>For user supplied tips on getting started, visit the eLinux (or other) community wiki pages:</p>
+    <ul>
+        <li><a class="external" href="http://github.com/beagleboard/pocketbeagle/wiki">PocketBeagle</a></li>
+        <li><a class="external" href="http://elinux.org/Beagleboard:BeagleBoard">BeagleBoard</a></li>
+        <li><a class="external" href="http://elinux.org/Beagleboard:BeagleBoard-xM">BeagleBoard-xM</a></li>
+        <li><a class="external" href="http://elinux.org/Beagleboard:BeagleBoard-X15">BeagleBoard-X15</a></li>
+        <li><a class="external" href="http://elinux.org/Beagleboard:BeagleBone">BeagleBone</a></li>
+        <li><a class="external" href="https://github.com/beagleboard/beaglebone-black/wiki">BeagleBone Black</a></li>
+        <li><a class="external" href="http://elinux.org/Beagleboard:BeagleBoneBlackWireless">BeagleBone Black Wireless</a></li>
+        <li><a class="external" href="https://github.com/beagleboard/beaglebone-blue/wiki/Frequently-Asked-Questions-(FAQ)">BeagleBone Blue</a></li>
+        <li><a class="external" href="http://wiki.seeed.cc/BeagleBone_Green/">SeeedStudio BeagleBone Green</a></li>
+        <li><a class="external" href="http://wiki.seeed.cc/BeagleBone_Green_Wireless/">SeeedStudio BeagleBone Green Wireless</a></li>
+        <li><a class="external" href="http://elinux.org/SanCloud_BeagleBoneEnhanced">SanCloud BeagleBone Enhanced</a></li>
+        <li><a class="external" href="http://wiki.neuromeka.net/index.php?title=Category:Getting_started_with_BB-Air">Neuromeka BeagleBone Air</a></li>
+    </ul>
+-->
+
+    <h1 id="update">Update board with latest software</h1>
+    <p>This step may or may not be necessary, depending on how old a software image you already
+        have, but executing this, the longest, step will ensure the rest will go as smooth as possible.
+    </p>
+    <h3>Step #0.A: Download the latest software image</h3>
+    <p>Download the lastest Debian image from <a href="https://beagleboard.org/latest-images">beagleboard.org/latest-images</a>. The "IoT" images provide more free disk space if you don't need to use a graphical user interface (GUI).</p>
+    <p><small><b>Note:</b> Due to sizing necessities, this download may take 30 minutes or more.</small></p>
+    <p>The Debian distribution is provied for the boards. The file you download will have an .img.xz extension. This is a compressed sector-by-sector image of the SD card.</p>
+    <img src="static/images/download-latestimage.png" style="display:block;margin-left:auto;margin-right:auto;" width="75%" />
+ 
+    <h3>Step #0.B: Install SD card programming utility</h3>
+    <p>Download and install <a target="_blank" href="https://www.balena.io/etcher/">balenaEtcher</a>.</p>
+    <img src="static/images/download-etcher.png" style="display:block;margin-left:auto;margin-right:auto;" width="75%" /><br />
+    <img src="static/images/install-etcher.png" style="display:block;margin-left:auto;margin-right:auto;" width="75%" /><br />
+<!--
+    <p>Some general help on programming SD cards can be found on the <a target="_blank" href="http://help.ubuntu.com/community/Installation/FromImgFiles">Ubuntu Image Writer page</a>.
+-->
+
+    <h3>Step #0.C: Connect SD card to your computer</h3>
+    <p>Use your computer's SD slot or a USB adapter to connect the SD card to your computer.</p>
+ 
+    <h3>Step #0.D: Write the image to your SD card</h3>
+    <p>Use Etcher to write the image to your SD card. Etcher will transparently decompress the image on-the-fly before writing it to the SD card.</p>
+    <img src="static/images/write-latestimage.png" style="display:block;margin-left:auto;margin-right:auto;" width="75%" />
+ 
+    <h3>Step #0.E: Eject the SD card</h3>
+    <p>Eject the newly programmed SD card.</p>
+ 
+    <h3>Step #0.F: Boot your board off of the SD card</h3>
+    <p>Insert SD card into your (powered-down) board, hold down the USER/BOOT button (if using Black) and apply power, either by the USB cable or 5V adapter.</p>
+    <p>If using an original BeagleBone or PocketBeagle, you are done.</p>
+    <p>If using BeagleBone Black and desire to write the image to your on-board eMMC, you'll need to follow the instructions at <a href="http://elinux.org/Beagleboard:BeagleBoneBlack_Debian#Flashing_eMMC">http://elinux.org/Beagleboard:BeagleBoneBlack_Debian#Flashing_eMMC</a>. When the flashing is complete, all 4 USRx LEDs will be steady on or off. The latest Debian flasher images automatically power down the board upon completion.  <em>This can take up to 45 minutes.</em>  Power-down your board, remove the SD card and apply power again to finish.</p>
+ 
+ 
+<h1>Start your Beagle</h1>
+    <h3><em>If any step fails, it is recommended to update to the <a href="#update">latest
+    software image</a> using the instructions above.</em></h3>
+ 
+    <a id="step1">
+    <h3><img class="steps" src="static/images/btn_step1.gif" />
+    <strong>Power and boot</strong></h3></a>
+ 
+    <div>
+     <p>Most Beagles include a USB cable, providing a convenient way
+     to provide both power to your Beagle and connectivity to your computer.
+     If you provide your own, ensure it is of good quality.
+<!--
+     You'll connect
+     the <a href="https://en.wikipedia.org/wiki/USB" class="external">"type-B" plug</a> of
+     the USB cable to your Beagle and the "type-A" plug to your computer.
+-->
+     <p>Alternatively, your Beagle may have a barrel jack. The voltage should be 5V
+         except for BeagleBoard-X15 and BeagleBone Blue which use 12V.
+     </p>
+     <em>Note that BeagleBoard-X15 must
+     always be powered by a 12V adapter with a barrel jack.</em></p>
+     <p>If you are using your Beagle with an <a href="https://en.wikipedia.org/wiki/Secure_Digital" class="external">SD (microSD) card</a>, make sure
+     it is inserted ahead of providing power. Most Beagles include programmed
+     on-board flash and therefore do not require an SD card to
+     be inserted.
+     </p>
+     <p></p>
+     <p>You'll see the power (PWR or ON) LED lit steadily. Within a minute or so, you should see the other LEDs blinking in their default configurations.
+         Consult the Quick Start Guide (QSG) or System Reference Manual (SRM) for your board to locate these LEDs.
+     </p>
+     <ul>
+      <li>USR0 is typically configured at boot to blink in a heartbeat pattern</li>
+      <li>USR1 is typically configured at boot to light during SD (microSD) card accesses</li>
+      <li>USR2 is typically configured at boot to light during CPU activity</li>
+      <li>USR3 is typically configured at boot to light during eMMC accesses</li>
+      <li>USR4/WIFI is typically configured at boot to light with WiFi (client) network association (<em>BeagleBone Blue and BeagleBone AI only</em>)</li>
+     </ul>
+     
+<!--
+     <img align="center" width="85%" src="static/images/BlackUSR.png" />
+-->   
+    </div>
+</br>
+    <a id="step2">
+    <h3><img class="steps" src="static/images/btn_step2.gif" /><strong>Enable a network connection</strong></h3></a>
+    <p>If connected via USB, a network adapter should show up on your computer. Your Beagle should be running a DHCP server that will provide your computer with an IP address of either 192.168.7.1 or 192.168.6.1, depending on the type of USB network adapter supported by your computer's operating system. Your Beagle will reserve 192.168.7.2 or 192.168.6.2 for itself.</p>
+    <p>If your Beagle includes WiFi, an access point called "BeagleBone-XXXX" where "XXXX" varies between boards. The access point password defaults to "BeagleBone". Your Beagle should be running a DHCP server that will provide your computer with an IP address in the 192.168.8.x range and reserve 192.168.8.1 for itself.</p>
+    <p>If your Beagle is connected to your local area network (LAN) via either Ethernet or WiFi, it will utilize <a href="https://en.wikipedia.org/wiki/Multicast_DNS" class="external">mDNS</a> to broadcast itself to your computer. If your computer supports mDNS, you should see your Beagle as beaglebone.local. <em>Non-BeagleBone boards will utilize alternate names. Multiple BeagleBone boards on the same network will add a suffix such as beaglebone-2.local.</em></p>
+    <p>The below table summarizes the typical addresses and should dynamically update to indicate an active connection.</>
+    <p><small><b>Note:</b> You must "load unsafe scripts" or load <a href="http://beagleboard.org/getting-started">this page</a> without HTTPS security for the automatic detection to work.</small></p>
+    <table border="0">
+     <tr>
+      <th>IP Address</th>
+      <th>Connection Type</th>
+      <th>Operating System(s)</th>
+      <th>Status</th>
+     </tr>
+     <tr>
+      <td>192.168.7.2</td>
+      <td>USB</td>
+      <td>Windows</td>
+      <td><iframe style="height:15px;width:90px;" frameborder="0" src="static/testconn.htm?host=192.168.7.2">Inactive</iframe></td>
+     </tr>
+     <tr>
+      <td>192.168.6.2</td>
+      <td>USB</td>
+      <td>Mac OS X, Linux</td>
+      <td><iframe style="height:15px;width:90px;" frameborder="0" src="static/testconn.htm?host=192.168.6.2">Inactive</iframe></td>
+     </tr>
+     <tr>
+      <td>192.168.8.1</td>
+      <td>WiFi</td>
+      <td>all</td>
+      <td><iframe style="height:15px;width:90px;" frameborder="0" src="static/testconn.htm?host=192.168.8.1">Inactive</iframe></td>
+     </tr>
+     <tr>
+      <td>beaglebone.local</td>
+      <td>all</td>
+      <td>mDNS enabled</td>
+      <td><iframe style="height:15px;width:90px;" frameborder="0" src="static/testconn.htm?host=beaglebone.local&frame=bblocal">Inactive</iframe></td>
+     </tr>
+     <tr>
+      <td>beaglebone-2.local</td>
+      <td>all</td>
+      <td>mDNS enabled</td>
+      <td><iframe style="height:15px;width:90px;" frameborder="0" src="static/testconn.htm?host=beaglebone-2.local">Inactive</iframe></td>
+     </tr>
+    </table>
+
+    <a id="step3">
+    <h3><img class="steps" src="static/images/btn_step3.gif" /><strong>Browse to your Beagle</strong></h3></a>
+    <p>Using either <a class="external" target="_blank" href="https://www.google.com/chrome">Chrome</a> or <a target="_blank" href="http://www.mozilla.org/firefox" class="external">Firefox</a> (Internet Explorer will <b>NOT</b> work), browse to the web server running on your board. It will load a presentation showing you the capabilities of the board. Use the arrow keys on your keyboard to navigate the presentation.</p>
+    <ul class="arrow">
+     <li>Click here to launch: <a id="bonelinktext" class="bonelink external" href="http://192.168.7.2">http://192.168.7.2</a><br />
+        <small>Older software images require you to EJECT the BEAGLE_BONE drive to start the
+        network.  With the latest software image, that step is no longer required.</small>
+     </li>
+    </ul>
+    <a class="bonelink" href="http://192.168.7.2"><img src="static/images/bone101.png" width="600px" /></a>
+ 
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <p><em>Do not use Internet Explorer.</em></p>
+    <p>Virtual machines are not recommended when using the direct USB connection. It is recommended you use only network connections to your board if you are using a virtual machine.</p>
+    <p>When using 'ssh' with the provided image, the username is 'debian' and the password is 'temppwd'.</p>
+    <p>With the latest images, <em>it should no longer be necessary to install drivers</em> for your operating system to give you network-over-USB access to your Beagle. In case you are running an older image, an older operating system or need additional drivers for
+serial access to older boards, links to the old drivers are below.</p>
+    <table border="0">
+     <tr>
+      <th>Operating System</th>
+      <th>USB Drivers</th>
+      <th>Comments</th>
+     </tr>
+     <tr>
+      <td>Windows (64-bit)</td>
+      <td>
+       <a target="_blank" href="Drivers/Windows/BONE_D64.exe">64-bit installer</a>
+      </td>
+      <td rowspan="2">
+       <p>If in doubt, try the 64-bit installer first.</p>
+       <small><ul>
+        <li><b>Note #1:</b> Windows Driver Certification warning may pop up two or three times.  Click "Ignore", "Install" or "Run"</li>
+        <li><b>Note #2:</b> To check if you're running 32 or 64-bit Windows see this: <a class="external" target="_blank" href="https://support.microsoft.com/kb/827218">support.microsoft.com/kb/827218</a>.</li>
+        <li><b>Note #3:</b> On systems without the latest service release, you may get an error (0xc000007b). In that case, please install the following and retry: <a class="external" target="_blank" href="https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523">www.microsoft.com/en-us/download/confirmation.aspx?id=13523</a>.</li>
+        <li><b>Note #4:</b> You may need to reboot Windows.</li>
+        <li><b>Note #5:</b> These drivers have been tested to work up to Windows 10</li>
+       </ul></small>
+      </td>
+     </tr>
+     <tr>
+      <td>Windows (32-bit)</td>
+      <td>
+       <a target="_blank" href="Drivers/Windows/BONE_DRV.exe">32-bit installer</a>
+      </td>
+     </tr>
+     <tr>
+      <td>Mac OS X</td>
+      <td>
+       <a target="_blank" href="Drivers/MacOSX/RNDIS/HoRNDIS.pkg">Network</a><br />
+       <a target="_blank" href="Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg">Serial</a><br />
+      </td>
+      <td>Install both sets of drivers.</td>
+     </tr>
+     <tr>
+      <td>Linux</td>
+      <td>
+       <a target="_blank" href="Drivers/Linux/FTDI/mkudevrule.sh">mkudevrule.sh</a>      
+      </td>
+      <td>Driver installation isn't required, but you might find a few udev rules helpful.</td>
+     </tr>
+    </table>
+    <p><b>Note:</b> Additional FTDI USB to serial/JTAG information and drivers are available from
+     <a class="external" target="_blank" href="https://www.ftdichip.com/Drivers/VCP.htm">www.ftdichip.com/Drivers/VCP.htm</a>.
+    </p>
+    <p><b>Note:</b> Additional USB to virtual Ethernet information and drivers are available from
+     <a target="_blank" class="external" href="https://www.linux-usb.org/gadget/">www.linux-usb.org/gadget/</a> and
+     <a target="_blank" class="external" href="https://joshuawise.com/horndis">joshuawise.com/horndis</a>.
+    </p>
+     <p>Visit <a href="https://beagleboard.org/support">beagleboard.org/support</a> for additional debugging tips.</p>
+ 
+   <h2 id="distros">Other currently available software images</h2>
+    <p>Some of the starting images below involve multiple steps to produce an SD card image or otherwise change some of the steps above, so be sure to read all the instructions on their pages. Choose the starting point you want, download or produce the SD card image and follow the steps above.</p>
+    <p>At the time of release, not all of these distributions support BeagleBone Black, but should soon.</p>
+    <ul class="arrow">
+     <li>Texas Instruments releases:
+      <a target="_blank" href="https://beagleboard.org/project/android/">
+       Android</a>,
+      <a target="_blank" href="https://beagleboard.org/project/amsdk/">
+       Linux</a>,
+      <a target="_blank" href="https://beagleboard.org/project/starterware/">
+       StarterWare (no OS)</a>
+     </li>
+     <li>Linux:
+      <a target="_blank" href="https://beagleboard.org/project/Debian/">Debian</a>,
+      <a target="_blank" href="https://beagleboard.org/project/angstrom">Angstrom Distribution</a>,
+      <a target="_blank" href="https://beagleboard.org/project/ubuntu/">Ubuntu</a>,
+      <a target="_blank" href="https://beagleboard.org/project/AM/">ArchLinux</a>,
+      <a target="_blank" href="https://beagleboard.org/project/Gentoo/">Gentoo</a>,
+      <a target="_blank" href="https://beagleboard.org/project/sabayon/">Sabayon</a>,
+      <a target="_blank" href="https://beagleboard.org/project/buildroot/">Buildroot</a>,
+      <a target="_blank" href="https://beagleboard.org/project/Nerves/">Erlang</a>,
+      <a target="_blank" href="https://beagleboard.org/project/fedora/">Fedora</a>
+     </li>
+     <li>Other:
+      <a target="_blank" href="https://beagleboard.org/project/QNX+Neutrino+on+OMAP/">QNX</a>,
+      <a target="_blank" href="https://beagleboard.org/project/freebsd/">FreeBSD</a>
+     </li>
+     <li><a target="_blank" href="https://beagleboard.org/project">Projects page</a></li>
+    </ul>
+ 
+    <h2 id="hardware">Hardware documentation</h2>
+    <p>Time to read that manual and check out the design materials:
+     <a class="external" href="https://github.com/beagleboard/beagleboard">BeagleBoard</a>,
+     <a class="external" href="https://github.com/beagleboard/beagleboard-xm">BeagleBoard-xM</a>,
+     <a class="external" href="https://github.com/beagleboard/beagleboard-x15">BeagleBoard-X15</a>,
+     <a class="external" href="https://github.com/beagleboard/beaglebone">BeagleBone</a>,
+     <a class="external" href="https://github.com/beagleboard/beaglebone-black">BeagleBone Black</a>,
+     <a class="external" href="https://github.com/beagleboard/beaglebone-black-wireless">BeagleBone Black Wireless</a>,
+     <a class="external" href="https://github.com/beagleboard/beaglebone-blue">BeagleBone Blue</a>,
+     <a class="external" href="https://github.com/beagleboard/pocketbeagle">PocketBeagle</a>, and
+     <a class="external" href="https://github.com/beagleboard/beaglebone-ai">BeagleBone AI</a>.</p>
+    <p>Other links to design materials for various releases can be found at
+     <a class="external" href="https://beagleboard.org/hardware/design">beagleboard.org/hardware/design</a>.</p>
+   
+<h2 id="books">Books</h2>
+<p>For a complete list of books on BeagleBone, see
+<a href="https://beagleboard.org/books" class="external">beagleboard.org/books</a>.</p>
+<div style="display:table;"><div style="display:table-cell;padding:10px;">
+<a href="https://bbb.io/bad-to-the-bone"><img style="width:98px;height:95px;" src="static/images/bad-to-the-bone.jpg" /></a>
+</div><div style="display:table-cell;padding:10px;">
+<a href="https://bbb.io/cookbook"><img style="width:98px;height:95px;" src="static/images/beaglebone-cookbook.jpg" /></a>
+</div><div style="display:table-cell;padding:10px;">
+<a href="https://bbb.io/ebb"><img style="width:98px;height:95px;" src="static/images/exploring-beaglebone.jpg" /></a>
+</div><div style="display:table-cell;padding:10px;">
+<a href="https://bbb.io/elp"><img style="width:98px;height:95px;" src="static/images/embedded-linux-primer.jpg" /></a>
+</div></div>
+<h3><a href="https://bbb.io/bad-to-the-bone" class="external">Bad to the Bone</a></h3>
+<p>Perfect for high-school seniors or freshman univerisity level text, consider using "Bad to the Bone"</p>
+<h3><a href="https://bbb.io/cookbook" class="external">BeagleBone Cookbook</a></h3>
+<p>A lighter treatment suitable for a bit broader audience without the backgrounders on
+    programming and electronics, consider "BeagleBone Cookbook"
+</p>
+<h3><a href="https://bbb.io/ebb" class="external">Exploring BeagleBone</a> and <a href="https://bbb.io/elp" class="external">Embedded Linux Primer</a></h3>
+<p>To take things to the next level of detail, consider "Exploring BeagleBone"
+    which can be considered the missing software manual and utilize
+    "Embedded Linux Primer" as a companion textbook to provide a strong
+    base on embedded Linux suitable for working with any hardware that will
+    run Linux.
+</p>
+   <!-- Content Area - END -->
+</div>
+<div style="clear:both;"></div>
+</font>
+
+</div>
+<div id="list">
+
+</div>
+<br/>
+<div id="createtime">Last updated by default on Sat Aug 03 2019 19:08:57 GMT-0000 (UTC).</div>
+
+     <div style="display:none;">1720249</div>
+</div></div>
+   <!-- Content Area - END -->
+
+  <!-- Footer - START -->
+  
+  <!--start footer-->       
+<div class="footer">
+<div class="social">
+     <span style="padding-left:8px"><a href="https://facebook.com/beagleboard"><img src="static/images/icon_facebook.png" style="width:27;height:28;border:0;" alt="facebook" /></a></span>
+    <span style="padding-left:8px"><a href="https://twitter.com/beagleboardorg"><img src="static/images/icon_twitter.png" style="width:27;height:28;border:0;" alt="twitter" /></a></span>
+    <span style="padding-left:8px"><a href="https://www.linkedin.com/groups/BeagleBoardorg-1474607?gid=1474607"><img src="static/images/icon_linkedin.png" style="width:27;height:28;border:0" alt="linkedin" /></a></span>
+    <span style="padding-left:8px"><a href="https://www.youtube.com/user/jadonk"><img src="static/images/youTube-icon.png" style="width:27;height:28;border:0;" alt="YouTube" /></a></span>
+  </div> 
+<div id="login">
+</div>
+
+<div id="footer-col1">
+<ul>
+<li><a href="https://beagleboard.org/boards">Boards</a></li>
+<li><a href="https://beagleboard.org/getting-started">Getting Started</a></li>
+<li><a href="https://beagleboard.org/support">Support</a></li>
+
+</ul>
+</div>
+<div id="footer-col2">
+<ul>
+<li><a href="https://beagleboard.org/Community">Community</a></li>
+<li><a href="https://beagleboard.org/project">Projects</a></li>
+<li><a href="https://beagleboard.org/Videos">Videos</a></li>
+</ul>
+</div>
+<div id="footer-col3">
+<ul>
+<li><a href="https://beagleboard.org/about">About Us</a></li>
+<li><a href="https://beagleboard.org/privacy">Privacy policy</a></li>
+<li><a href="https://beagleboard.org/terms">Terms of Use</a></li>
+</ul>
+</div>
+<div id="cc"><a href="https://creativecommons.org/about/license/" target="_blank"><img src="static/images/88x31.png" alt="Creative Commons - Conditions - Attribution and Share Alike" style="width:88;height:31;border:0;" /></a><span style="padding-left:8px">Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution-Share Alike 3.0 license </span></div>
+
+</div>
+<!-- Footer - END -->
+</div>
+<!-- DIV that centers page - END -->
+  
+
+  <script type="text/javascript">
+    $('#prompt_form').html(''
+     + '  <form method="post" action="">'
+     + '   <input type="text" id="openid" name="openid_url"></input>'
+     + '   <button type="submit">Login</button>'
+     + '  </form>'
+     + $('#prompt_form').html()
+    );
+  </script>
+<div id="fb-root"></div>
+</body>
+</html>
