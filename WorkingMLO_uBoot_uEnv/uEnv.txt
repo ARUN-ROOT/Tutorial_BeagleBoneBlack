@@ -1,0 +1,11 @@
+# linux kernel <= 3.8.10 use ttO0 , root partition : ext3 otherwise use ttyS0 and ext4
+console=ttyO0,115200n8
+ipaddr=192.168.7.2
+serverip=12.168.7.1
+loadaddr=0x82000000
+fdtaddr=0x88000000
+
+# Images and DTB present in Rootfs under boot folder 
+loadfromsd=load mmc 0:2 ${loadaddr} /boot/uImage ; load mmc 0:2 ${fdtaddr} /boot/am335x-boneblack.dtb ; 
+linuxbootargs=setenv bootargs console=${console} earlyprintk root=/dev/mmcblk0p2 rw rootwait
+uenvcmd=echo "Loading Arun Image from SD Card..."; setenv autoload no; run loadfromsd; run linuxbootargs; bootm ${loadaddr} - ${fdtaddr}
