@@ -36,7 +36,7 @@ tisdk-rootfs-image-am335x-evm.tar.xz
  	make -j8 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage dtbs
  	  if you are facing any error : 
  	   sudo gedit scripts/dtc/dtc-lexer.lex.c
- 	   export yyloc
+ 	   extern  yyloc
  	make -j8 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- modules
  	mkdir ../tmp
  	make -j4 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_STRIP=1 INSTALL_MOD_PATH=../tmp modules_install
@@ -196,6 +196,13 @@ rmmod spi_pdev
 =====
 make -j8 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- KCFLAGS="-march=armv7-a -mtune=cortex-a8" zImage
 
+
+===========================
+serverip=192.168.1.10
+ipaddr=192.168.1.11
+setenv rootpath=/nfsroot
+nfsargs= setenv bootargs mpurate=${mpurate} console=${console} vram=${vram} root=/dev/nfs tcp rw init=/sbin/init nfsroot=192.168.1.10:/nfsroot,nfsvers=3,tcp rw ip=192.168.1.11:::::eth0
+uenvcmd=run nfsargs;mmc rescan; tftpboot 0x81000000 am335x-boneblack.dtb; tftpboot 0x80200000 zImage; bootz 0x80200000 - 0x81000000;
 
 
 
